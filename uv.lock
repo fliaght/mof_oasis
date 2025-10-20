@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.10, <3.13"
 resolution-markers = [
     "python_full_version >= '3.12'",
@@ -1592,6 +1592,19 @@ fastapi = [
     { name = "pydantic" },
     { name = "pydantic-settings" },
     { name = "uvicorn" },
+]
+
+[[package]]
+name = "h5netcdf"
+version = "1.7.2"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "h5py" },
+    { name = "packaging" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/4a/cb/9b2ad1b14734bce8f28e74b635a67952fac095264aa48e2aa92fa6108971/h5netcdf-1.7.2.tar.gz", hash = "sha256:c2b35a5c2f9d6f0df3dcd1bf43ff6945af284d234bf74a12ed3fec7c0156d644", size = 71100, upload-time = "2025-10-17T07:58:15.324Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1b/6f/b9f2dbdded31b56ed5fcd03b9f0e468a0e9d582afbf961f3371bd6449a14/h5netcdf-1.7.2-py3-none-any.whl", hash = "sha256:7b8d4323630ebbce56983f59855bf45b71a2f3016435e736140b4a99d750db9c", size = 56135, upload-time = "2025-10-17T07:58:13.892Z" },
 ]
 
 [[package]]
@@ -3781,22 +3794,24 @@ wheels = [
 
 [[package]]
 name = "nomad-parser-plugins-workflow"
-version = "1.1.8"
+version = "1.1.10"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
     { name = "asr" },
+    { name = "h5netcdf" },
     { name = "h5py" },
     { name = "lxml" },
-    { name = "nomad-lab" },
+    { name = "netcdf4" },
+    { name = "nomad-lab", extra = ["infrastructure"] },
     { name = "nomad-schema-plugin-run" },
     { name = "nomad-schema-plugin-simulation-workflow" },
     { name = "phonopy" },
     { name = "pydantic" },
     { name = "xarray" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/50/03/f616a9962889c6bd06c0cc037d39138d8359af5858fdbd7caa8fc1c8c728/nomad_parser_plugins_workflow-1.1.8.tar.gz", hash = "sha256:df8603a0dbb8400a4e8005adb46290e7f06c628335fd6cc5ced79039d0f0ff8c", size = 31864751, upload-time = "2025-06-06T10:01:56.732Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/aa/0b/ecce5da34b2c1c072b03b1dc205cd84d9c037ea79a2143eef6a46adebaf4/nomad_parser_plugins_workflow-1.1.10.tar.gz", hash = "sha256:dd1eb3d937242b88e6dfdb137b24af244c3d19b4ce7505841302241d4f84945e", size = 31960481, upload-time = "2025-10-13T14:52:20.02Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/41/08/f2e69dac27a956e6f54cb930fab5ea93f62f30a3dce2b231a64f958af998/nomad_parser_plugins_workflow-1.1.8-py3-none-any.whl", hash = "sha256:0e932fababf0ffff5186b3c177ecd1c430b456d09b79a54b36fb1aac735268f6", size = 121426, upload-time = "2025-06-06T10:01:54.872Z" },
+    { url = "https://files.pythonhosted.org/packages/a5/6c/aa7b0010aecce929e65e4db75c6df139025f36ae607d476570474304e98b/nomad_parser_plugins_workflow-1.1.10-py3-none-any.whl", hash = "sha256:081c6af55c16d386009f158c77442caf540e2722ea3dc98d97cea9cb15da1cb1", size = 123554, upload-time = "2025-10-13T14:52:17.126Z" },
 ]
 
 [[package]]
